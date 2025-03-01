@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">YouTube</div>
+        <input type="text" placeholder="Search" id="search-box">
+        <button onclick="searchVideos()">Search</button>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li>Home</li>
+                <li>Trending</li>
+                <li>Subscriptions</li>
+            </ul>
+        </aside>
+        <main class="video-container" id="video-container">
+            <div class="video" onclick="playVideo('https://www.w3schools.com/html/mov_bbb.mp4')">
+                <img src="https://via.placeholder.com/300" alt="Video Thumbnail">
+                <p>Sample Video</p>
+            </div>
+            <div class="video" onclick="playVideo('https://www.w3schools.com/html/mov_bbb.mp4')">
+                <img src="https://via.placeholder.com/300" alt="Video Thumbnail">
+                <p>Another Video</p>
+            </div>
+        </main>
+    </div>
+    <div id="video-player" class="hidden">
+        <video id="main-video" controls></video>
+        <button onclick="closeVideo()">Close</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
